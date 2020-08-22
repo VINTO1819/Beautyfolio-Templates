@@ -20,13 +20,15 @@
 				<!-- Header -->
 					<header id="header">
 						<span class="avatar"><img src="UserAssets/<%- Data.Avatar %>" alt="" /></span>
-						<h1 style="margin-bottom: 0px;"><strong><%- Data.Slogan %></strong></h1>
 						<h2><%- Data.Greetings %></h2>
-						<ul class="icons">
+						<ul class="icons" style="margin-top:15px">
 							<% Data.URL.forEach(function(UrlData){ %>
 								<li><a href="<%- UrlData.Url %>" class="icon style2 fa-<%- UrlData.Type %>"><span class="label"><%- UrlData.Type %></span></a></li>
 							<% }) %>
 						</ul>
+						<div style="width: 100%; text-align: center;">
+							<hr style="width: 65%; display: inline-block; margin-top: 15px;">
+						</div>
 					</header>
 
 				<!-- Main -->
