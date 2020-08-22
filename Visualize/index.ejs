@@ -24,7 +24,7 @@
 						<h2><%- Data.Greetings %></h2>
 						<ul class="icons">
 							<% Data.URL.forEach(function(UrlData){ %>
-								<li><a href="#" class="icon style2 fa-<%- UrlData.Type %>"><span class="label"><%- UrlData.Type %></span></a></li>
+								<li><a href="<%- UrlData.Url %>" class="icon style2 fa-<%- UrlData.Type %>"><span class="label"><%- UrlData.Type %></span></a></li>
 							<% }) %>
 						</ul>
 					</header>
