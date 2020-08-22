@@ -72,7 +72,7 @@
 								</div>
 								<div id="Gallery1">
 									<h1 style="font-size: 34px; margin-bottom: 15px;">💻 Projects</h1>
-									<% Data.Projects.All.slice(0, Math.ceil((Data.Projects.All.length -1) / 2)).forEach(function(Project){ %> 
+									<% Data.Projects.All.slice(0, Math.ceil((Data.Projects.All.length) / 2) -1).forEach(function(Project){ %> 
 										<a href="UserAssets/<%- Project.CoverImage %>">
 											<img src="UserAssets/<%- Project.CoverImage %>" alt="" />
 											<h1 style="margin-top: 10px;"><%- Project.Title %></h1>
@@ -96,7 +96,7 @@
 								</div>
 								<div id="Gallery2">
 									<h1 style="font-size: 34px; margin-bottom: 15px;">⠀⠀⠀</h1>
-									<% Data.Projects.All.slice(Math.ceil((Data.Projects.All.length -1) / 2), Data.Projects.All.length -1).forEach(function(Project){ %> 
+									<% Data.Projects.All.slice(Math.ceil((Data.Projects.All.length) / 2) -1, Data.Projects.All.length).forEach(function(Project){ %> 
 										<a href="UserAssets/<%- Project.CoverImage %>">
 											<img src="UserAssets/<%- Project.CoverImage %>" alt="" />
 											<h1 style="margin-top: 10px;"><%- Project.Title %></h1>
