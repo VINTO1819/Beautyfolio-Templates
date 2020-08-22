@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title><%- Data.Title %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" type="image/png" href="UserAssets/<%- Data.Favicon %>"/>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<span class="avatar"><img src="UserAssets/<%- Data.Avatar %>" alt="" /></span>
+						<h1 style="margin-bottom: 0px;"><strong><%- Data.Slogan %></strong></h1>
+						<h2><%- Data.Greetings %></h2>
+					</header>
+
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Thumbnails -->
+							<section class="thumbnails">
+								<div>
+									<h1 style="font-size: 34px; margin-bottom: 15px;">🎉 <%- Data.ID %></h1>
+
+									<a onclick="window.location.href = 'https://github.com/<%- Data.ID %>'">
+										<img src="https://github-readme-stats.vercel.app/api?username=<%= Data.ID %>&show_icons=true&hide_border=true&theme=cobalt&count_private=true" alt="" />
+									</a>
+
+									<a onclick="window.location.href = 'https://github.com/<%- Data.ID %>'">
+										<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=<%= Data.ID %>&layout=compact&hide_border=true&theme=cobalt" alt="" />
+									</a>
+
+									<% Data.Stacks.forEach(function(StackItem){ %>
+										<a>
+											<div class="single-chart">
+												<svg viewBox="0 0 36 36" class="circular-chart green">
+												  <path class="circle-bg"
+													d="M18 2.0845
+													  a 15.9155 15.9155 0 0 1 0 31.831
+													  a 15.9155 15.9155 0 0 1 0 -31.831"
+												  />
+												  <path class="circle"
+													stroke-dasharray="<%= StackItem.SkillPercent %>, 100"
+													d="M18 2.0845
+													  a 15.9155 15.9155 0 0 1 0 31.831
+													  a 15.9155 15.9155 0 0 1 0 -31.831"
+												  />
+												</svg>
+												<img class="chartImage" src="UserAssets/<%- StackItem.Image %>" style="width: 70%;"></img>
+											</div>
+											<h2 style="margin-top: 10px;"><%- StackItem.Title %></h2>
+											<p><%- StackItem.Description %></p>
+										</a>
+									<% }) %>
+								</div>
+								<div id="Gallery1">
+									<h1 style="font-size: 34px; margin-bottom: 15px;">💻 Projects</h1>
+									<% Data.Projects.All.slice(0, Math.ceil((Data.Projects.All.length -1) / 2)).forEach(function(Project){ %> 
+										<a href="UserAssets/<%- Project.CoverImage %>">
+											<img src="UserAssets/<%- Project.CoverImage %>" alt="" />
+											<h1 style="margin-top: 10px;"><%- Project.Title %></h1>
+											<h5><%- Project.SubTitle %></h5>
+											<p><%- Project.Description %></p>
+											<ul style="margin-left: 15px; margin-right: 15px; margin-bottom: 10px;">
+												<% Project.RoleList.forEach(function(Item){ %> 
+													<li><%- Item %></li>
+												<% }) %>
+											</ul>
+											
+											<div style="text-align: center; width: 100%; padding-left: 10px; padding-right: 10px; padding-bottom: 15px; height: 50px;">
+												<% Project.Links.forEach(function(Item){ %> 
+													<div onclick="window.location.href = '<%- Item.URL %>'"><img class="ProjectIcon" src="UserAssets/<%- Item.Icon %>"
+														style="width: 40px;"/></div>
+												<% }) %>
+											</div>
+											<p style="margin-bottom: 15px; text-align: right;">📡 <%- Project.Type %> Project</p>
+										</a>
+									<% }) %>
+								</div>
+								<div id="Gallery2">
+									<h1 style="font-size: 34px; margin-bottom: 15px;">⠀⠀⠀</h1>
+									<% Data.Projects.All.slice(Math.ceil((Data.Projects.All.length -1) / 2), Data.Projects.All.length -1).forEach(function(Project){ %> 
+										<a href="UserAssets/<%- Project.CoverImage %>">
+											<img src="UserAssets/<%- Project.CoverImage %>" alt="" />
+											<h1 style="margin-top: 10px;"><%- Project.Title %></h1>
+											<h5><%- Project.SubTitle %></h5>
+											<p><%- Project.Description %></p>
+											<ul style="margin-left: 15px; margin-right: 15px; margin-bottom: 10px;">
+												<% Project.RoleList.forEach(function(Item){ %> 
+													<li><%- Item %></li>
+												<% }) %>
+											</ul>
+											
+											<div style="text-align: center; width: 100%; padding-left: 10px; padding-right: 10px; padding-bottom: 15px; height: 50px;">
+												<% Project.Links.forEach(function(Item){ %> 
+													<div onclick="window.location.href = '<%- Item.URL %>'"><img class="ProjectIcon" src="UserAssets/<%- Item.Icon %>"
+														style="width: 40px;"/></div>
+												<% }) %>
+											</div>
+
+											<p style="margin-bottom: 15px; text-align: right;">📡 <%- Project.Type %> Project</p>
+										</a>
+									<% }) %>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p>&copy; <%- Data.ID %>. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. This Portfolio is made with <a href="https://github.com/VINTO1819/Beautyfolio">Beautyfolio</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
