@@ -1,4 +1,6 @@
 # Beautyfolio - Visualize
+<img src="https://raw.githubusercontent.com/VINTO1819/Beautyfolio-Templates/master/Visualize/Visualize.PNG" alt="drawing" width="650"/>
+   
 Templated에서 제작/배포한 Visualize 템플릿을 변형한 포트폴리오 템플릿입니다.
 
 저작권 경고
